@@ -2,15 +2,16 @@ import requests
 import re
 
 KEYWORDS = ["coupon", "discount", "promo", "voucher", "code", "offer"]
-CODE_REGEX = r'([A-Z0-9]{5,12})'
+CODE_REGEX = r'\b[A-Z0-9]{6,12}\b'
 
 def find_codes_in_text(text):
     probable_codes = []
     for keyword in KEYWORDS:
-        pattern = rf'({keyword})\s*[:\-]?\s*{CODE_REGEX}'
+        pattern = rf'{keyword}[^\w]{{0,10}}([A-Z0-9]{{6,12}})'
         matches = re.findall(pattern, text, re.IGNORECASE)
         for match in matches:
-            probable_codes.append(match[-1])
+            probable_codes.append(match)
+
     return list(set(probable_codes))
 
 def main():
