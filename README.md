@@ -3,6 +3,7 @@ Input a websites URL, will scan source code for possible coupon/discount codes p
 
 Requirements:
 Python Installed
+Requests 
 
 Steps To Use (Just in Case :))
 1. Save the code
