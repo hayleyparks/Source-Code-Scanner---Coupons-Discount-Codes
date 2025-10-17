@@ -14,3 +14,6 @@ b. or (if your system uses python 3): python find_coupon_codes.py
 5. Results!
 
 Good luck (just in case a dev somehow did leave these in the source code (although unlikely)) 
+
+WARNING: 
+If the code finds possible coupons and they do not look like "normal" coupon codes, etc, it is very likely not actually coupon codes and the program mistook it for coupon codes. 
