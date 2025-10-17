@@ -1,15 +1,12 @@
 import requests
 import re
 
-# Common keywords and regex patterns for coupon codes
 KEYWORDS = ["coupon", "discount", "promo", "voucher", "code", "offer"]
-# Simple regex for possible coupon code formats (customize as needed)
 CODE_REGEX = r'([A-Z0-9]{5,12})'
 
 def find_codes_in_text(text):
     probable_codes = []
     for keyword in KEYWORDS:
-        # Look for keyword followed by a possible code
         pattern = rf'({keyword})\s*[:\-]?\s*{CODE_REGEX}'
         matches = re.findall(pattern, text, re.IGNORECASE)
         for match in matches:
