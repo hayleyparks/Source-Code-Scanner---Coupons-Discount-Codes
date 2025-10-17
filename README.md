@@ -2,7 +2,9 @@
 Input a websites URL, will scan source code for possible coupon/discount codes possibly left behind by the web devs
 
 Requirements:
+
 Python Installed
+
 Requests 
 
 Steps To Use (Just in Case :))
